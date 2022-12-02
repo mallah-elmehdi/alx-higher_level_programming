@@ -4,7 +4,7 @@ if __name__ == "__main__":
 
     arglen = len(argv) - 1
     if arglen == 0:
-        print("{arglen} arguments.".format(arglen))
+        print("0 arguments.")
     else:
         print("{} argument".format(arglen), end=":\n" if arglen == 1 else "s:\n")
         for i in range(1, arglen + 1):
