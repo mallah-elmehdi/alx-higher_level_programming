@@ -13,19 +13,18 @@ def roman_to_int(roman_string):
     }
     result = 0
     for i in range(len(roman_string)):
-        if i + 2 < len(roman_string):
-            item1 = roman_string[i]
-            item2 = roman_string[i + 2]
-            if roman[item2] > roman[item1]:
-                result -= roman[item1]
-                continue
-        elif i + 1 < len(roman_string):
+        if i + 1 < len(roman_string):
             item1 = roman_string[i]
             item2 = roman_string[i + 1]
             if roman[item2] > roman[item1]:
                 result -= roman[item1]
                 continue
+        elif i + 2 < len(roman_string):
+            item1 = roman_string[i]
+            item2 = roman_string[i + 2]
+            if roman[item2] > roman[item1]:
+                result -= roman[item1]
+                continue
         item = roman_string[i]
         result += roman[item]
-
     return result
