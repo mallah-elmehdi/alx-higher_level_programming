@@ -6,9 +6,9 @@ class Node:
     """Node class defines a node of a singly linked list"""
 
     # constructor
-    def __init__(self, data, next_node=None):
+    def __init__(self, data, nextnode=None):
         self.__data = data
-        self.__next_node = next_node
+        self.__nextnode = nextnode
 
     # Private instance attribute: data
     @property
@@ -21,16 +21,16 @@ class Node:
             raise TypeError("data must be an integer")
         self.__data = value
 
-    # Private instance attribute: next_node
+    # Private instance attribute: nextnode
     @property
-    def next_node(self):
-        return self.__next_node
+    def nextnode(self):
+        return self.__nextnode
 
-    @next_node.setter
-    def next_node(self, value):
+    @nextnode.setter
+    def nextnode(self, value):
         if value != None and type(value) is not Node:
-            raise TypeError("next_node must be a Node object")
-        self.__next_node = value
+            raise TypeError("nextnode must be a Node object")
+        self.__nextnode = value
 
 
 class SinglyLinkedList:
@@ -46,34 +46,34 @@ class SinglyLinkedList:
         new_node = Node(value)
         if self.__head == None:
             self.__head = new_node
-        elif self.__head.next_node == None:
+        elif self.__head.nextnode == None:
             if value < self.__head.data:
-                new_node.next_node = self.__head
+                new_node.nextnode = self.__head
                 self.__head = new_node
             else:
-                self.__head.next_node = new_node
+                self.__head.nextnode = new_node
         else:
             temp = self.__head
             if value < self.__head.data:
-                new_node.next_node = self.__head
+                new_node.nextnode = self.__head
                 self.__head = new_node
                 return
             while temp != None:
-                if temp.next_node == None:
-                    temp.next_node = new_node
+                if temp.nextnode == None:
+                    temp.nextnode = new_node
                     break
-                elif temp.next_node.data >= value:
-                    new_node.next_node = temp.next_node
-                    temp.next_node = new_node
+                elif temp.nextnode.data >= value:
+                    new_node.nextnode = temp.nextnode
+                    temp.nextnode = new_node
                     break
-                temp = temp.next_node
+                temp = temp.nextnode
 
     # print result
     def __str__(self):
         values = ""
         while self.__head != None:
             values += str(self.__head.data)
-            self.__head = self.__head.next_node
+            self.__head = self.__head.nextnode
             if self.__head != None:
                 values += "\n"
         return values
