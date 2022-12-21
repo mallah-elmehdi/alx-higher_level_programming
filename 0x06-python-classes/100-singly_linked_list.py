@@ -6,9 +6,9 @@ class Node:
     """Node class defines a node of a singly linked list"""
 
     # constructor
-    def __init__(self, data, nextnode=None):
+    def __init__(self, data, next_node=None):
         self.__data = data
-        self.__nextnode = nextnode
+        self.__next_node = next_node
 
     # Private instance attribute: data
     @property
@@ -21,16 +21,19 @@ class Node:
             raise TypeError("data must be an integer")
         self.__data = value
 
-    # Private instance attribute: nextnode
+    # Private instance attribute: next_node
     @property
-    def nextnode(self):
-        return self.__nextnode
+    def next_node(self):
+        return self.__next_node
 
-    @nextnode.setter
-    def nextnode(self, value):
+    @next_node.setter
+    def next_node(self, value):
         if value != None and type(value) is not Node:
-            raise TypeError("nextnode must be a Node object")
-        self.__nextnode = value
+            raise TypeError("next_node must be a Node object")
+        self.__next_node = value
+
+    def nextnode(self, value):
+        self.next_node(value)
 
 
 class SinglyLinkedList:
@@ -40,30 +43,33 @@ class SinglyLinkedList:
         self.__head = None
 
     def sortedinsert(self, value):
+        self.sorted_insert(value)
+
+    def sorted_insert(self, value):
         new_node = Node(value)
         if self.__head == None:
             self.__head = new_node
-        elif self.__head.nextnode == None:
+        elif self.__head.next_node == None:
             if value < self.__head.data:
-                new_node.nextnode = self.__head
+                new_node.next_node = self.__head
                 self.__head = new_node
             else:
-                self.__head.nextnode = new_node
+                self.__head.next_node = new_node
         else:
             temp = self.__head
             if value < self.__head.data:
-                new_node.nextnode = self.__head
+                new_node.next_node = self.__head
                 self.__head = new_node
                 return
             while temp != None:
-                if temp.nextnode == None:
-                    temp.nextnode = new_node
+                if temp.next_node == None:
+                    temp.next_node = new_node
                     break
-                elif temp.nextnode.data >= value:
-                    new_node.nextnode = temp.nextnode
-                    temp.nextnode = new_node
+                elif temp.next_node.data >= value:
+                    new_node.next_node = temp.next_node
+                    temp.next_node = new_node
                     break
-                temp = temp.nextnode
+                temp = temp.next_node
 
     # print result
     def __str__(self):
@@ -71,7 +77,7 @@ class SinglyLinkedList:
         values = ""
         while self.__head != None:
             values += str(self.__head.data)
-            self.__head = self.__head.nextnode
+            self.__head = self.__head.next_node
             if self.__head != None:
                 values += "\n"
         return values
