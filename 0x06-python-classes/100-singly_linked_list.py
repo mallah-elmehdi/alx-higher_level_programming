@@ -69,6 +69,8 @@ class SinglyLinkedList:
     def __str__(self):
         values = ""
         while self.__head != None:
-            values += str(self.__head.data) + "\n"
+            values += str(self.__head.data)
             self.__head = self.__head.next_node
+            if self.__head != None:
+                value += "\n"
         return values
