@@ -40,9 +40,6 @@ class SinglyLinkedList:
         self.__head = None
 
     def sortedinsert(self, value):
-        self.sorted_insert(value)
-
-    def sorted_insert(self, value):
         new_node = Node(value)
         if self.__head == None:
             self.__head = new_node
