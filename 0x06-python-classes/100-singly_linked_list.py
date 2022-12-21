@@ -70,6 +70,7 @@ class SinglyLinkedList:
 
     # print result
     def __str__(self):
+        """print result SinglyLinkedList."""
         values = ""
         while self.__head != None:
             values += str(self.__head.data)
