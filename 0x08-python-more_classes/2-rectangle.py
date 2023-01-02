@@ -6,12 +6,11 @@ class Rectangle:
     """Rectangle that defines a rectangle"""
 
     def __init__(self, width=0, height=0):
-        """
-        Rectangle object constructor.
+        """Rectangle object constructor.
 
         Args:
-            width: width of rect
-            height: height of rect
+            width (int): width of rect
+            height (int): height of rect
         """
         self.width = width
         self.height = height
