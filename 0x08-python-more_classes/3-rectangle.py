@@ -57,5 +57,6 @@ class Rectangle:
         if self.area() != 0:
             for i in range(self.height):
                 ret += "#" * self.width
-                ret += "\n"
+                if i + 1 != self.height:
+                    ret += "\n"
         return ret
