@@ -5,7 +5,6 @@
 class Rectangle:
     """Rectangle that defines a rectangle"""
 
-    # ----------------- constructor
     def __init__(self, width=0, height=0):
         """
         Rectangle object constructor.
@@ -17,7 +16,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    # ----------------- gettes
     @property
     def width(self):
         """width getter"""
@@ -28,7 +26,6 @@ class Rectangle:
         """height getter"""
         return self.__height
 
-    # ----------------- setters
     @width.setter
     def width(self, value):
         """width setter"""
@@ -47,7 +44,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    # ----------------- public
     def area(self):
         return self.width * self.height
 
