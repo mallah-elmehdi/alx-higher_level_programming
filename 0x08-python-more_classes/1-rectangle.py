@@ -10,8 +10,8 @@ class Rectangle:
         Rectangle object constructor.
 
         Args:
-            width: width of rect
-            height: height of rect
+            width (int): width of rect
+            height (int): height of rect
         """
         self.width = width
         self.height = height
