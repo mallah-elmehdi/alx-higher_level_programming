@@ -1,12 +1,15 @@
+"""N queens"""
 import sys
 
 
 def err(msg):
+    """error handling"""
     print(msg)
     exit(1)
 
 
 def main():
+    """main function"""
 
     if len(sys.argv) != 2:
         err("Usage: nqueens N")
