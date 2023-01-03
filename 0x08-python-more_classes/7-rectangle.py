@@ -60,7 +60,7 @@ class Rectangle:
         ret = ""
         if self.area() != 0:
             for i in range(self.height):
-                ret += Rectangle.print_symbol * self.width
+                ret += str(Rectangle.print_symbol) * self.width
                 if i + 1 != self.height:
                     ret += "\n"
         return ret
