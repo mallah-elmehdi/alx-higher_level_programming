@@ -27,4 +27,3 @@ def text_indentation(text):
         text = get_new_str(text, delim)
 
     print(text, end="")
-
