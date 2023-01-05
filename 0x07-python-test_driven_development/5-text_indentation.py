@@ -2,7 +2,12 @@
 """
 Module function:
     * def text_indentation(text)
+    * def get_new_str(text, delim):
 """
+
+
+def get_new_str(text, delim):
+    return f'{delim}\n\n'.join(map(lambda line: line.strip(), text.split(delim)))
 
 
 def text_indentation(text):
@@ -19,7 +24,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     for delim in ['?', ".", ":"]:
-        text = text.replace(delim, f"{delim}\n\n")
+        text = get_new_str(text, delim)
 
-    text = '\n\n'.join(map(lambda line: line.strip(), text.split("\n\n")))
-    print(text)
+    print(text, end="")
+
