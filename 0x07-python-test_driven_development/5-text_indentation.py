@@ -23,5 +23,3 @@ def text_indentation(text):
 
     return '\n\n'.join(map(lambda line: line.strip(), text.split("\n\n")))
 
-
-print(text_indentation())
