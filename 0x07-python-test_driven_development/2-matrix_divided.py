@@ -15,6 +15,7 @@ def matrix_divided(matrix, div):
 
     Return: int
     """
+    
     new_matrix = []
 
     if not isinstance(matrix, list):
