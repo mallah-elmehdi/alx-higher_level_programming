@@ -70,7 +70,7 @@ Now use it:
 
 -------------------
 
-    >>> add_integer(1, int(float('nan')))
+    >>> add_integer(1, float('nan'))
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
