@@ -23,6 +23,11 @@ Now use it:
 
 -------------------
 
+    >>> text_indentation("hello School")
+    hello School
+
+-------------------
+
     >>> text_indentation(None)
     Traceback (most recent call last):
     ...
