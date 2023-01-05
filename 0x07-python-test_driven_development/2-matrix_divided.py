@@ -15,6 +15,7 @@ def matrix_divided(matrix, div):
 
     Return: int
     """
+    new_matrix = []
 
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
@@ -34,9 +35,6 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    new_matrix = []
-
     for i in range(len(matrix)):
         new_matrix.append([])
         for j in range(len(matrix[i])):
