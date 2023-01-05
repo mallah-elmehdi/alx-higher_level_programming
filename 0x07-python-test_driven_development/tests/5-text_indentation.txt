@@ -13,7 +13,13 @@ Now use it:
 -------------------
 
     >>> text_indentation("Holberton. School? How are you: John")
-    'Holberton.\n\nSchool?\n\nHow are you:\n\nJohn'
+    Holberton.
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    How are you:
+    <BLANKLINE>
+    John
 
 -------------------
 
@@ -25,7 +31,6 @@ Now use it:
 -------------------
 
     >>> text_indentation("")
-    ''
 
 -------------------
 
