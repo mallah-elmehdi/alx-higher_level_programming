@@ -21,5 +21,5 @@ def text_indentation(text):
     for delim in ['?', ".", ":"]:
         text = text.replace(delim, f"{delim}\n\n")
 
-    return '\n\n'.join(map(lambda line: line.strip(), text.split("\n\n")))
-
+    text = '\n\n'.join(map(lambda line: line.strip(), text.split("\n\n")))
+    print(text)
