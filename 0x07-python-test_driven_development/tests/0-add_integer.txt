@@ -1,0 +1,45 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Given two integers, return the sum i.e (a + b).
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(1, 9)
+    10
+   
+    >>> add_integer(2)
+    100
+   
+    >>> add_integer(-98)
+    0
+   
+    >>> add_integer(-1, -9)
+    -10
+   
+    >>> add_integer([], 9)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(2.0, 1.9)
+    3
+
+    >>> add_integer('a', 9)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+   
+    >>> add_integer(1, '9')
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+   
+    >>> add_integer(int(1.898), float(2.5))
+    3
+
