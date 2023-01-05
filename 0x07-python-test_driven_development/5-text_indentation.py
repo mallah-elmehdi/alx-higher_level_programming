@@ -7,12 +7,15 @@ Module function:
 
 
 def get_new_str(text, delim):
-    return f'{delim}\n\n'.join(map(lambda line: line.strip(), text.split(delim)))
+    return f'{delim}\n\n'.join(
+        map(lambda line: line.strip(), text.split(delim))
+    )
 
 
 def text_indentation(text):
     """
-    Given two string, prints a text with 2 new lines after each of these characters: '.', '?' and ':'
+    Given two string, prints a text with 2 new lines after each
+    of these characters: '.', '?' and ':'
 
     Params:
         -> text : string
