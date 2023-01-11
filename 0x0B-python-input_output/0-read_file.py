@@ -12,7 +12,7 @@ def read_file(filename=""):
     Args:
         -> filename: str
 
-    Return: void 
+    Return: void
     """
 
     with open(file=filename, mode="r", encoding="utf-8") as file:
