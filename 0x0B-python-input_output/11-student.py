@@ -4,9 +4,6 @@ Module class:
     * class Student
 """
 
-import os
-import sys
-
 
 class Student:
     """
