@@ -18,4 +18,4 @@ def load_from_json_file(filename):
     """
 
     with open(file=filename, mode="r") as file:
-        json.loads(file.read())
+        return json.loads(file.read())
