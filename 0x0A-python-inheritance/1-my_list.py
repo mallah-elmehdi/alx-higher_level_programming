@@ -14,4 +14,3 @@ class MyList(list):
         """prints the list, but sorted (ascending sort)"""
         new = sorted(self)
         print(new)
-        return new
