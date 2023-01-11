@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Module function:
-    * lookup(obj)
+Module function/classes:
+    * class MyList(list):
 """
 
 
