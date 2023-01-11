@@ -4,6 +4,9 @@ Module class:
     * class Student
 """
 
+import os
+import sys
+
 
 class Student:
     """
@@ -23,4 +26,5 @@ class Student:
         ))
 
     def reload_from_json(self, json):
-        self.__setattr__(json)
+        for k, v in json.items():
+            self.__setattr__(k, v)
