@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module function:
-    * add_integer(a, b)
+    * lookup(obj)
 """
 
 
